@@ -1,0 +1,3 @@
+
+ Escrever dados em arquivos é muito fácil caraio. 
+Esta é a ultima linha porra!!!! 

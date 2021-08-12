@@ -1,0 +1,32 @@
+class Pessoa:
+    def __init__(self, nome, sobrenome, cpf):
+        self.__nome = nome
+        self.__sobrenome = sobrenome
+        self.__cpf = cpf
+
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
+
+
+#Cliente herda a classe Pessoa
+class Cliente(Pessoa):
+    def __init__(self, nome, sobrenome, cpf, renda):
+        super().__init__(nome, sobrenome, cpf)
+        self.__renda = renda
+
+#Funcionário herda a classe Pessoa
+class Funcionario(Pessoa):
+    def __init__(self, nome, sobrenome, cpf, matricula):
+        super().__init__(nome, sobrenome, cpf)
+        self.__matricula = matricula
+
+    def nome_completo(self):
+        return f'{self.__matricula} {self._Pessoa__nome}'
+
+
+cliente1 = Cliente('Wesley', 'Vieira', 39129375865, 3500)
+
+funcionario1 = Funcionario('Michael', 'Menezes', 5486987895758, 10000)
+
+print(Cliente.nome_completo(cliente1))
+print(Funcionario.nome_completo(funcionario1))
